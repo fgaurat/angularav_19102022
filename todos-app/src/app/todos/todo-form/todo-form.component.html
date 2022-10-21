@@ -1,0 +1,13 @@
+<div>
+
+  <form>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Todo title...</mat-label>
+    <input matInput [(ngModel)]="todo.title" name="todoTitle" placeholder="Todo title...">
+  </mat-form-field>
+  <mat-checkbox [(ngModel)]="todo.completed" name="todoCompleted">Done</mat-checkbox>
+  <button mat-flat-button color="primary" (click)="submit()">Primary</button>
+</form>
+
+</div>

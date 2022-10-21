@@ -1,0 +1,24 @@
+<h2>Reactive Form</h2>
+
+<form [formGroup]="todoForm">
+
+  <mat-form-field appearance="fill">
+    <mat-error>Erreur !</mat-error>
+    <mat-label>Todo title...</mat-label>
+    <input matInput name="todoTitle" formControlName="title" placeholder="Todo title...">
+  </mat-form-field>
+
+  <mat-checkbox  name="todoCompleted" formControlName="completed" >Done</mat-checkbox>
+  <pre>
+  {{todoForm.value|json}}
+  {{todoForm.status|json}}
+  {{todoForm.valid|json}}
+  {{todoForm.invalid|json}}
+  {{todoForm.dirty|json}}
+  {{todoForm.pristine|json}}
+</pre>
+<br>
+  <button mat-flat-button color="primary" [disabled]="todoForm.invalid" (click)="submit()">Primary</button>
+</form>
+
+
